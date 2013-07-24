@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <link rel="Stylesheet" href="szablon/style.css" TYPE="text/css">  
+                   
+    <meta http-equiv="Content-Language" content="pl">              
+    <meta name="Author" content="Dorota Glinka">                 
+    <meta http-equiv="Reply-to" content="dorota.glinka@op.pl">                 
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">                 
+   
+    <title> ZADANIE</title>        
+  </head>
+  
+  <body>
+  <div id="all">
+  
+    <div id="naglowek">     
+       NOTATNIK                                                   
+    </div>  
+       
