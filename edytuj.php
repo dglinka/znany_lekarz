@@ -6,16 +6,19 @@
   
     $id = get_id(); 
     if(isset($_POST['zmien'])) {					      
-        $tresc = clear($_POST['tresc']);
-        $data = date("d-m-Y");
-        
-        $update = "UPDATE `notatka` SET `tresc` = '{$tresc}',`data` = '{$data}' WHERE `id`='{$id}' LIMIT 1";
-        $result= mysql_query($update);
-        if(!($result)) 
-            echo '<p>Wystąpił błąd:<br>'.mysql_error().'</p>';     
-        else
-            header("Location: index.php"); 
-             
+        if( !empty($_POST['tresc']) ){
+            $tresc = clear($_POST['tresc']);
+            $data = date("d-m-Y");
+            
+            $update = "UPDATE `notatka` SET `tresc` = '{$tresc}',`data` = '{$data}' WHERE `id`='{$id}' LIMIT 1";
+            $result= mysql_query($update);
+            if(!($result)) 
+                echo '<p>Wystąpił błąd:<br>'.mysql_error().'</p>';     
+            else
+                header("Location: index.php"); 
+         } else {
+            echo '<p id=blad> Notatka nie może być pusta!</p>';
+         }    
     }
     if(isset($_POST['wyjdz'])) {
         header("Location: index.php"); 
