@@ -1,9 +1,8 @@
-/* CSS Document */
 body {
 	font-family: Verdana, 'Trebuchet MS', Arial, Helvetica, sans-serif;
 	font-size: 15px;
 	color: black;  
-	background:  white;//#EEEEEE;
+	background:  white;
 	margin: 0; 
   padding: 0;
 	height:auto;
@@ -12,9 +11,10 @@ body {
 #all{
   width: 956px;
   margin: 1px auto;
-  position:relative; 
-  background: white;         
+  position:relative;          
 }
+
+/**********   top   ****************/
 
 #naglowek{
   width: 100%;
@@ -27,6 +27,22 @@ body {
   border-bottom:   4px solid blue;         
 }
 
+#a_menu {
+ color:white;
+}
+
+#menu{   
+  background-color: black;
+  border-top: 4px solid blue; 
+  clear: none;
+  color: white;
+  width: 40%;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+/*******************************/
 
 p {
   text-align: justify;
@@ -47,32 +63,14 @@ ul {
 }
 
  
-#tab_wiadomosci{
+#tab_notatki{
   position: relative; 
   font-size: 18px;
   width: 100%;
-  table-layout: relative;
   text-align: center;
   border: 1px solid blue;
-  margin-bottom: 20px;
-  
+  margin-bottom: 20px; 
 }
-
-#menu{   
-  background-color: black;
-  border-top: 4px solid blue; 
-  clear: none;
-  color: white;
-  width: 40%;
-  font-size: 18px;
-  text-align: center;
-  border-radius: 15px;
-}
- 
-#a_menu {
- color:white;
-}
-
 
 /**************  stopka  ******************/
 #koniec{
