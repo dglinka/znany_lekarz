@@ -28,15 +28,5 @@ function clear($text) {
     $text = htmlspecialchars($text);
     return $text;
 }
-
-
-function get_notes() {
-
-    $result = mysql_query("SELECT * FROM `notatki` ");
-    if(mysql_num_rows($result) == 0) {
-        return false;
-    }
-    return mysql_fetch_assoc($result);
-}
  
 ?>

@@ -5,10 +5,7 @@
   db_connect();  
 
   wyswietl();
-          
-            
-            
-     
+    
   include("szablon/stopka.php");
   db_close();  
 
@@ -20,11 +17,28 @@
 function wyswietl(){   
     $zapytanie = "SELECT `id`,`data`,`tresc` FROM `notatka`";
     $result = mysql_query($zapytanie);
-    echo '<table id=tab_notatki>';
-    while ($row = mysql_fetch_row($result)) {
-        echo '<tr><td>'. $row[1] .'</td><td>'. $row[2].'</td></tr>';
+    while ($row = mysql_fetch_row($result)){                            
+        $id = $row[0];
+        $data = $row[1];
+        $tresc = $row[2];
+        
+  		  echo '
+        <div id = notatka>
+            <div id=data>
+                '.$data.'
+            </div>
+            <div id=tresc>
+                '.$tresc.'
+            </div>
+            <div id=edytuj>
+                 <a href="edytuj.php?id='.$id.'" id=edytuj>Edytuj</a>
+            </div>     
+        </div> 
+        ';
     }
-    echo '<table>';
 }
+     
+    
+     
      
 ?>

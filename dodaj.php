@@ -7,7 +7,7 @@
 
   if(isset($_POST['dodaj'])) {					      
       $tresc = clear($_POST['tresc']);
-      $data = date("d-m-Y   H:i:s");
+      $data = date("d-m-Y");
       if (!(empty($tresc))){   
         $zapytanie = "INSERT INTO `notatka` ( `tresc`,`data`) VALUES ('{$tresc}','{$data}')";           
         $result = mysql_query($zapytanie);
@@ -42,6 +42,6 @@ function formularz(){
               </p> 
       </form> 
   	';
-}
+}       
 
 ?>
