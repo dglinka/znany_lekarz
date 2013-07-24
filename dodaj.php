@@ -7,14 +7,14 @@
 
   if(isset($_POST['dodaj'])) {					      
       $tresc = clear($_POST['tresc']);
-      $data = date("d M Y, H:i:s");
+      $data = date("d-m-Y   H:i:s");
       if (!(empty($tresc))){   
-        $zapytanie = "INSERT INTO `notatka` ( `tresc`,`data`) VALUES ('{$tresc}', '{$data}')";           
+        $zapytanie = "INSERT INTO `notatka` ( `tresc`,`data`) VALUES ('{$tresc}','{$data}')";           
         $result = mysql_query($zapytanie);
         if(!($result)) 
-            echo '<p>Wyst¹pi³ b³¹d:<br>'.mysql_error().'</p>';     
+            echo '<p>WystÄ…piÅ‚ bÅ‚Ä…d:<br>'.mysql_error().'</p>';     
         else
-            echo '<p>Notatka zosta³a dodana!<br>';
+            echo '<p>Notatka zostaÅ‚a dodana!<br>';
       }   
   }
   formularz();
