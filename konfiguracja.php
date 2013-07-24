@@ -28,5 +28,12 @@ function clear($text) {
     $text = htmlspecialchars($text);
     return $text;
 }
+
+function get_id(){
+  	$url = $_SERVER["REQUEST_URI"];
+    $b=explode('?', $url);
+	  parse_str($b[1], $out);
+ 	  return $out['id'];
+}
  
 ?>

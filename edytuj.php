@@ -16,9 +16,9 @@
                 echo '<p>Wystąpił błąd:<br>'.mysql_error().'</p>';     
             else
                 header("Location: index.php"); 
-         } else {
+         } else 
             echo '<p id=blad> Notatka nie może być pusta!</p>';
-         }    
+             
     }
     if(isset($_POST['wyjdz'])) {
         header("Location: index.php"); 
@@ -30,26 +30,15 @@
   db_close();  
   
   
-  
-  
-  
-function get_id(){
-  	$url = $_SERVER["REQUEST_URI"];
-    $b=explode('?', $url);
-	  parse_str($b[1], $out);
- 	  return $out['id'];
-}
-
-
-function form_edycji($note_id){
+function form_edycji($note_id){ 
     
-    $zapytanie = "SELECT `tresc` FROM `notatka` WHERE `id`='{$note_id}' LIMIT 1";
+    $zapytanie = "SELECT `tresc`, `data` FROM `notatka` WHERE `id`='{$note_id}' LIMIT 1";
     $result = mysql_query($zapytanie);
     $note = mysql_fetch_row($result);         
 		if ( !empty($note[0])){
       	echo '
         	<form id= "form" enctype="multipart/form-data" method="post" action="edytuj.php?id='.$note_id.'" > 
-                  <ul>                 
+                  <ul> <li>Data ostatniej edycji: '.$note[1].'</li>                
             		       <li><b><br>Tresc:<br><br></b></li>
             	         <li><textarea name="tresc" cols="80" rows="5" >'.$note[0].'</textarea></li>
                   </ul>  

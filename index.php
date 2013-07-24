@@ -32,7 +32,10 @@ function wyswietl(){
             </div>
             <div id=edytuj>
                  <a href="edytuj.php?id='.$id.'" id=edytuj>Edytuj</a>
-            </div>     
+            </div>  
+            <div id=usun>
+                 <a href="usun.php?id='.$id.'" id=usun>Usuń</a>
+            </div>   
         </div> 
         ';
     }
