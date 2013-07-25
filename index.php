@@ -10,12 +10,9 @@
   db_close();  
 
 
-
-
-
-
+  
 function wyswietl(){   
-    $zapytanie = "SELECT `id`,`data`,`tresc` FROM `notatka`";
+    $zapytanie = "SELECT * FROM `notatka` ORDER BY `id` DESC";
     $result = mysql_query($zapytanie);
     while ($row = mysql_fetch_row($result)){                            
             $id = $row[0];
