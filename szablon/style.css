@@ -2,16 +2,18 @@ body {
 	font-family: Verdana, 'Trebuchet MS', Arial, Helvetica, sans-serif;
 	font-size: 15px;
 	color: black;  
-	background:  white;
 	margin: 0; 
   padding: 0;
-	height:auto;
+	height:100%;
+  width:100%;
 }
 
+
 #all{
-  width: 956px;
+  width: 1000px;
   margin: 1px auto;
-  position:relative;          
+  position:relative;      
+  /*background: rgba(0,0,0, 0.50);*/       
 }
 
 /**********   top   ****************/
@@ -46,6 +48,7 @@ body {
 
 p {
   text-align: justify;
+  margin: 20px;
 }
 
 a{
@@ -65,14 +68,91 @@ ul {
 
 /**************  stopka  ******************/
 #koniec{
-    position: fixed; 
     clear: both;
     width: 956px;
-    background-color: white;
+   // background-color: white;
     border-top: 1px solid blue;
     display: block;
     padding-bottom: 3px;
-    margin-top: 0;
+    margin-top: 20px;
     bottom: 0;
     text-align: center; 
+  //    background: rgba(0,0,0, 0.70);
+}
+
+
+/*************  notatka - wyswietl ******************/
+
+#notatka{
+    position: relative;     
+    margin: 100px auto 100px auto;
+    width:50%;
+	  text-align: center;
+    border: 3px solid blue;
+    background-color:paleturquoise;//powderblue;
+    box-shadow:  5px 0 10px 7px;
+}   
+
+#a_edytuj{
+  color: white;
+}
+#a_usun{
+  color: white;
+}
+
+#edytuj{
+    float: right;            
+    background-color: dodgerblue;
+    border: 2px solid blue;
+    width:60px;
+    border-radius: 15px;
+
+}
+
+#usun{
+    float: right;
+    background-color: dodgerblue;
+    border: 2px solid blue;
+    width:50px;
+    border-radius: 15px;
+
+}
+
+#data{
+    border-bottom: 1px solid blue;
+}
+
+
+/***********  dodaj  *************/
+
+#dodaj{
+    float: right;   
+    background-color: dodgerblue;
+    border: 2px solid blue;
+    width:70px;
+    border-radius: 15px;
+    text-align: center;
+}  
+
+#pole{
+    position: relative;     
+    margin: 50px auto 50px auto;
+    width:70%;
+	  text-align: justify;
+    border: 1px solid blue;
+    background-color:paleturquoise;
+    box-shadow:  5px 0 10px 7px;
+    -moz-box-shadow: 5px 0 20px 10px; /*by  cień wyświetlał się w starszych przeglądarkach Firefoxa*/
+    -webkit-box-shadow: 5px 0 20px 10px;
+}  
+
+#form{
+    position: relative;     
+    margin: 50px auto 50px auto;
+    width:80%;
+	  text-align: center;
+}
+
+#przycisk{
+     font-size: 17px;
 }

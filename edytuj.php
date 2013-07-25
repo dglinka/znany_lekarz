@@ -38,13 +38,11 @@ function form_edycji($note_id){
 		if ( !empty($note[0])){
       	echo '
         	<form id= "form" enctype="multipart/form-data" method="post" action="edytuj.php?id='.$note_id.'" > 
-                  <ul> <li>Data ostatniej edycji: '.$note[1].'</li>                
-            		       <li><b><br>Tresc:<br><br></b></li>
-            	         <li><textarea name="tresc" cols="80" rows="5" >'.$note[0].'</textarea></li>
+                   <p>Data ostatniej edycji: '.$note[1].'</p>
+                  <ul>                
+            	         <li><textarea name="tresc" cols="100" rows="10" id = pole>'.$note[0].'</textarea></li>                           
+                       <li><input type="submit" name=zmien id=przycisk value="Zmień"> <input type="submit" id=przycisk name=wyjdz value="Wyjdź"> </li>                 
                   </ul>  
-                  <p>             
-                    <input type="submit" name=zmien value="Zmień"> <input type="submit" name=wyjdz value="Wyjdź">                  
-                  </p> 
           </form> 
            
       	';

@@ -18,6 +18,11 @@
       }else
           echo'<p>Notatka nie może być pusta!</p>';   
   }
+  
+  if(isset($_POST['wyjdz'])) {
+        header("Location: index.php"); 
+  }
+  
   formularz();
 
      
@@ -29,13 +34,13 @@
 function formularz(){
   	echo '
     	<form id= "form" enctype="multipart/form-data" method="post" action="dodaj.php" > 
+          
               <ul>                 
         		       <li><b><br>Nowa notatka:<br><br></b></li>
-        	         <li><textarea name="tresc" cols="80" rows="5"></textarea></li>
-              </ul>  
-              <p>             
-                <input type="submit" name=dodaj value="Dodaj">                  
-              </p> 
+        	         <li><textarea id=pole name="tresc" cols="100" rows="10"></textarea></li>              
+                   <li><input type="submit" name=dodaj id=przycisk value="Dodaj"> <input type="submit" id=przycisk name=wyjdz value="Wyjdź"></li>
+              </ul> 
+            
       </form> 
   	';
 }       
