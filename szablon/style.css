@@ -100,6 +100,8 @@ ul {
     border: 3px solid blue;
     background-color:	white;
     box-shadow:  5px 0 10px 7px;
+    -moz-box-shadow: 5px 0 20px 10px; 
+    -webkit-box-shadow: 5px 0 20px 10px;
 }   
 
 #a_edytuj, #a_usun{
